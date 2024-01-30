@@ -10,13 +10,42 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Cliente {
+  id        Int        @id @default(autoincrement())
+  nome      String
+  cpf       String     @unique @db.Char(11)
+  email     String     @unique @db.VarChar(100)
+  hash      String
+  salt      String
+  telefone     String[]   @unique @db.Char(14)
+  compras   Compra[]
 
-model User {
-  id  Int @id @default(autoincrement())
-  cpf String @unique @db.Char(11)
-  email String @unique @db.VarChar(100)
-  password String
-  salt String
-  name String
-  phone Int
+  @@map("cliente")
+}
+
+model Produto {
+  id          Int                  @id @default(autoincrement())
+  nome        String               @db.VarChar(100)
+  preco       Decimal              @db.Money
+  categoria   String               @db.VarChar(30)
+  foto_path   String
+  descricao   String?              @db.Text
+  desconto    Int
+  quantidade  Int
+  compras     Compra[]   
+
+  @@map("produto")
+}
+
+model Compra {
+  id         Int                  @id @default(autoincrement())
+  data       DateTime             @default(now())
+  cliente    Cliente              @relation(fields: [cliente_id], references: [id])
+  cliente_id Int                
+  valor      Decimal              @map("valor") @db.Money
+  produto    Produto              @relation(fields: [produto_id], references: [id])
+  produto_id Int
+  
+
+  @@map("compra")
 }
