@@ -15,7 +15,7 @@ async function createUser(req: Request, res: Response) {
     });
     res.status(201).json(cliente);
   } catch (error) {
-    res.status(500).json({ error });
+    res.status(400).json({ error });
   }
 }
 
@@ -24,7 +24,7 @@ async function getAllUsers(req: Request, res: Response) {
     const clientes = await prisma.cliente.findMany();
     res.status(200).json(clientes);
   } catch (error) {
-    res.status(500).json({ error });
+    res.status(400).json({ error });
   }
 }
 
@@ -36,13 +36,12 @@ async function getUser(req: Request, res: Response) {
     });
     res.status(200).json(cliente);
   } catch (error) {
-    res.status(500).json({ error });
+    res.status(400).json({ error });
   }
 }
 
 async function updateUser(req: Request, res: Response) {
   try {
-    console.log("OOOOOOOi");
     const { id } = req.params;
     const cliente = await prisma.cliente.update({
       where: { id: Number(id) },
@@ -50,7 +49,7 @@ async function updateUser(req: Request, res: Response) {
     });
     res.status(200).json(cliente);
   } catch (error) {
-    res.status(500).json({ error });
+    res.status(400).json({ error });
   }
 }
 
@@ -62,7 +61,7 @@ async function deleteUser(req: Request, res: Response) {
     });
     res.status(200).json(cliente);
   } catch (error) {
-    res.status(500).json({ error });
+    res.status(400).json({ error });
   }
 }
 

@@ -37,13 +37,14 @@ model Produto {
 }
 
 model Compra {
+  id         Int                  @id @default(autoincrement())
   data       DateTime             @default(now())
   cliente    Cliente              @relation(fields: [cliente_id], references: [id])
   cliente_id Int                
   valor      Decimal              @map("valor") @db.Money
+  quantidade Int
   produto    Produto              @relation(fields: [produto_id], references: [id])
   produto_id Int
   
-  @@id([data, cliente_id, produto_id])
   @@map("compra")
 }
