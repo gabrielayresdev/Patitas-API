@@ -30,10 +30,6 @@ class CompraController {
 
       if (!produto) throw new Error("Produto não encontrado");
 
-      console.log(cliente);
-      console.log("==========");
-      console.log(produto);
-
       // Cria a compra
       const compra = await prisma.compra.create({
         data: {
@@ -62,16 +58,8 @@ class CompraController {
 
   async delete(req: Request, res: Response) {
     try {
-      //const { data, produtoId, clienteId } = req.body;
       const { id } = req.params;
       const compra = await prisma.compra.delete({
-        /* where: {
-          data_cliente_id_produto_id: {
-            data,
-            cliente_id: Number(clienteId),
-            produto_id: Number(produtoId),
-          },
-        }, */
         where: { id: Number(id) },
       });
       res.status(200).json(compra);

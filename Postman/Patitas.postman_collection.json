@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "4c47fea4-4f57-4fdc-9db6-529e4ff8452f",
+		"name": "Patitas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26828798"
+	},
+	"item": [
+		{
+			"name": "Compra",
+			"item": [
+				{
+					"name": "/compra",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "teste123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "gabriel.ar.fort@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"produtoId\": 2,\r\n    \"quantidade\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compra",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/compra/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/compra/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"compra",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "/produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena\",\r\n    \"preco\": 286.90,\r\n    \"categoria\": \"ração\",\r\n    \"foto_path\": \"https://www.petlove.com.br/images/products/243631/…-Adultos-Ra%C3%A7as-Mini-e-Pequena.jpg?1628875695\",\r\n    \"descricao\": \"A Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena oferece todos os cuidados a partir de um ano de idade. Com um conceito natural do produto às embalagens, a Fórmula Natural foi formulada para promover uma vida mais saudável, longeva e de bem-estar para cães e gatos. A linha oferece versões para diferentes portes e idades e proporciona entre outros benefícios, cuidados com a pele e pelagem, equilíbrio da flora intestinal e antioxidantes naturais. A embalagem I'm Green, foi desenvolvida em polietileno verde. I’m green têm como matéria prima a cana- de-açúcar, fonte renovável que auxilia na captura de gases causadores do efeito estufa.\",\r\n    \"desconto\": 0,\r\n    \"quantidade\": 123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/produto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena\",\r\n    \"preco\": 286.90,\r\n    \"categoria\": \"ração\",\r\n    \"foto_path\": \"https://www.petlove.com.br/images/products/243631/…-Adultos-Ra%C3%A7as-Mini-e-Pequena.jpg?1628875695\",\r\n    \"descricao\": \"A Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena oferece todos os cuidados a partir de um ano de idade. Com um conceito natural do produto às embalagens, a Fórmula Natural foi formulada para promover uma vida mais saudável, longeva e de bem-estar para cães e gatos. A linha oferece versões para diferentes portes e idades e proporciona entre outros benefícios, cuidados com a pele e pelagem, equilíbrio da flora intestinal e antioxidantes naturais. A embalagem I'm Green, foi desenvolvida em polietileno verde. I’m green têm como matéria prima a cana- de-açúcar, fonte renovável que auxilia na captura de gases causadores do efeito estufa.\",\r\n    \"desconto\": 0,\r\n    \"quantidade\": 123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/produto/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena\",\r\n    \"preco\": 286.90,\r\n    \"categoria\": \"ração\",\r\n    \"foto_path\": \"https://www.petlove.com.br/images/products/243631/…-Adultos-Ra%C3%A7as-Mini-e-Pequena.jpg?1628875695\",\r\n    \"descricao\": \"A Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena oferece todos os cuidados a partir de um ano de idade. Com um conceito natural do produto às embalagens, a Fórmula Natural foi formulada para promover uma vida mais saudável, longeva e de bem-estar para cães e gatos. A linha oferece versões para diferentes portes e idades e proporciona entre outros benefícios, cuidados com a pele e pelagem, equilíbrio da flora intestinal e antioxidantes naturais. A embalagem I'm Green, foi desenvolvida em polietileno verde. I’m green têm como matéria prima a cana- de-açúcar, fonte renovável que auxilia na captura de gases causadores do efeito estufa.\",\r\n    \"desconto\": 0,\r\n    \"quantidade\": 123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/produto/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"desconto\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/produto/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/produto/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3333/produto/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "/cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Gabriel Ayres\",\r\n    \"cpf\": \"13404795750\",\r\n    \"email\": \"gabriel.ar.fort@gmail.com\",\r\n    \"senha\": \"teste123\",\r\n    \"telefone\": \"967213085\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/cliente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/cliente/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/cliente/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Gabriel Ayres\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/cliente/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
