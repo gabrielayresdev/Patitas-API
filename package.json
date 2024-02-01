@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx ts-node-dev --transpile-only --no-notify server.ts",
+    "start": "npx ts-node-dev --transpile-only --no-notify server.ts",
     "migrate": "npx prisma migrate dev --name init"
   },
   "keywords": [],
