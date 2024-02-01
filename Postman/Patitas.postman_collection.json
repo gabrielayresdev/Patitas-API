@@ -56,7 +56,18 @@
 					"name": "/compra",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"compra"
+							]
+						}
 					},
 					"response": []
 				},
@@ -123,7 +134,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena\",\r\n    \"preco\": 286.90,\r\n    \"categoria\": \"ração\",\r\n    \"foto_path\": \"https://www.petlove.com.br/images/products/243631/…-Adultos-Ra%C3%A7as-Mini-e-Pequena.jpg?1628875695\",\r\n    \"descricao\": \"A Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena oferece todos os cuidados a partir de um ano de idade. Com um conceito natural do produto às embalagens, a Fórmula Natural foi formulada para promover uma vida mais saudável, longeva e de bem-estar para cães e gatos. A linha oferece versões para diferentes portes e idades e proporciona entre outros benefícios, cuidados com a pele e pelagem, equilíbrio da flora intestinal e antioxidantes naturais. A embalagem I'm Green, foi desenvolvida em polietileno verde. I’m green têm como matéria prima a cana- de-açúcar, fonte renovável que auxilia na captura de gases causadores do efeito estufa.\",\r\n    \"desconto\": 0,\r\n    \"quantidade\": 123\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -154,7 +165,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena\",\r\n    \"preco\": 286.90,\r\n    \"categoria\": \"ração\",\r\n    \"foto_path\": \"https://www.petlove.com.br/images/products/243631/…-Adultos-Ra%C3%A7as-Mini-e-Pequena.jpg?1628875695\",\r\n    \"descricao\": \"A Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena oferece todos os cuidados a partir de um ano de idade. Com um conceito natural do produto às embalagens, a Fórmula Natural foi formulada para promover uma vida mais saudável, longeva e de bem-estar para cães e gatos. A linha oferece versões para diferentes portes e idades e proporciona entre outros benefícios, cuidados com a pele e pelagem, equilíbrio da flora intestinal e antioxidantes naturais. A embalagem I'm Green, foi desenvolvida em polietileno verde. I’m green têm como matéria prima a cana- de-açúcar, fonte renovável que auxilia na captura de gases causadores do efeito estufa.\",\r\n    \"desconto\": 0,\r\n    \"quantidade\": 123\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -162,14 +173,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3333/produto",
+							"raw": "http://localhost:3333/produto/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3333",
 							"path": [
-								"produto"
+								"produto",
+								"1"
 							]
 						}
 					},
@@ -190,7 +202,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3333/produto/id",
+							"raw": "http://localhost:3333/produto/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -198,7 +210,7 @@
 							"port": "3333",
 							"path": [
 								"produto",
-								"id"
+								"1"
 							]
 						}
 					},
@@ -214,7 +226,7 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://localhost:3333/produto/2",
+							"raw": "http://localhost:3333/produto/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -222,7 +234,7 @@
 							"port": "3333",
 							"path": [
 								"produto",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -310,7 +322,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3333/cliente/5",
+							"raw": "http://localhost:3333/cliente/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -318,7 +330,7 @@
 							"port": "3333",
 							"path": [
 								"cliente",
-								"5"
+								"1"
 							]
 						}
 					},
@@ -339,7 +351,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3333/cliente/id",
+							"raw": "http://localhost:3333/cliente/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -347,7 +359,7 @@
 							"port": "3333",
 							"path": [
 								"cliente",
-								"id"
+								"1"
 							]
 						}
 					},
@@ -363,7 +375,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://localhost:3333/cliente/5",
+							"raw": "http://localhost:3333/cliente/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -371,7 +383,7 @@
 							"port": "3333",
 							"path": [
 								"cliente",
-								"5"
+								"1"
 							]
 						}
 					},
