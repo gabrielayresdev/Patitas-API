@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import Auth from "../config/auth";
 
 import { PrismaClient } from "@prisma/client";
-import filtrarDadosDoCliente from "../utils/FiltrarDadosDoCliente";
+import filtrarDadosDoCliente from "../utils/filtrarDadosDoCliente";
 const prisma = new PrismaClient();
 
 class AuthController {
