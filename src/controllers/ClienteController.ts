@@ -2,6 +2,8 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 import { Request, Response } from "express";
+import auth from "../config/auth";
+import filtrarDadosDoCliente from "../utils/FiltrarDadosDoCliente";
 
 /* async function teste(req: Request, res: Response) {
   res.status(200).send("Funcionou");
@@ -10,11 +12,13 @@ import { Request, Response } from "express";
 class ClienteController {
   async createUser(req: Request, res: Response) {
     try {
-      //const { nome, cpf, email, senha, telefone } = req.body;
+      const { nome, cpf, email, senha, telefone } = req.body;
+      const { hash, salt } = auth.generatePassword(senha);
+
       const cliente = await prisma.cliente.create({
-        data: req.body,
+        data: { nome, cpf, email, telefone, hash, salt },
       });
-      res.status(201).json(cliente);
+      res.status(201).json(filtrarDadosDoCliente(cliente));
     } catch (error) {
       res.status(400).json({ error });
     }

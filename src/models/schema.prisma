@@ -15,7 +15,8 @@ model Cliente {
   nome      String
   cpf       String     @unique @db.Char(11)
   email     String     @unique @db.VarChar(100)
-  senha     String
+  hash      String
+  salt      String
   telefone  String     @unique @db.VarChar(14)
   compras   Compra[]
 

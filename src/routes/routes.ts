@@ -4,6 +4,10 @@ const router = Router();
 import ClienteController from "../controllers/ClienteController";
 import ProdutoController from "../controllers/ProdutoController";
 import CompraController from "../controllers/CompraController";
+import AuthController from "../controllers/AuthController";
+
+router.post("/login", AuthController.login);
+router.get("/user", AuthController.getDetails);
 
 router.post("/cliente", ClienteController.createUser);
 router.get("/cliente", ClienteController.getAllUsers);
