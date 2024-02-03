@@ -2,16 +2,22 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 import { Request, Response } from "express";
+import { validationResult } from "express-validator";
 
 class ProdutoController {
   async createProduto(req: Request, res: Response) {
     try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ error: errors.array() });
+      }
+
       const produto = await prisma.produto.create({
         data: req.body,
       });
       res.status(201).json(produto);
     } catch (error) {
-      res.status(400).json({ error });
+      res.status(500).json({ error });
     }
   }
 
@@ -20,7 +26,7 @@ class ProdutoController {
       const produtos = await prisma.produto.findMany();
       res.status(200).json(produtos);
     } catch (error) {
-      res.status(400).json({ error });
+      res.status(500).json({ error });
     }
   }
 
@@ -32,7 +38,7 @@ class ProdutoController {
       });
       res.status(200).json(produto);
     } catch (error) {
-      res.status(400).json({ error });
+      res.status(500).json({ error });
     }
   }
 
@@ -45,7 +51,7 @@ class ProdutoController {
       });
       res.status(200).json(produto);
     } catch (error) {
-      res.status(400).json({ error });
+      res.status(500).json({ error });
     }
   }
 
@@ -57,7 +63,7 @@ class ProdutoController {
       });
       res.status(200).json(produto);
     } catch (error) {
-      res.status(400).json({ error });
+      res.status(500).json({ error });
     }
   }
 }

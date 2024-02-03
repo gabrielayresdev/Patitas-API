@@ -2,25 +2,24 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 import { Request, Response } from "express";
+import Auth from "../config/auth";
+import { validationResult } from "express-validator";
 
 class CompraController {
   async comprar(req: Request, res: Response) {
     try {
-      // Captura os dados de login do cliente
-      const authHeader = req.headers.authorization;
-      if (!authHeader) throw new Error("Cliente não encontrado");
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ error: errors.array() });
+      }
 
-      const credentials = Buffer.from(authHeader.split(" ")[1], "base64")
-        .toString()
-        .split(":");
-      const username = credentials[0];
-      const password = credentials[1];
-
-      // Pesquisa o cliente no db
+      const token = Auth.getToken(req);
+      const payload = Auth.decodeJWT(token);
       const cliente = await prisma.cliente.findUnique({
-        where: { email: username, senha: password },
+        where: { id: payload.sub },
       });
-      if (!cliente) throw new Error("Cliente não encontrado");
+      if (!cliente)
+        return res.status(404).json({ message: "Usuário não encontrado." });
 
       // Pesquisa o produto no db
       const { produtoId, quantidade } = req.body;

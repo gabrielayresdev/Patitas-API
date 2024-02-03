@@ -5,24 +5,43 @@ import ClienteController from "../controllers/ClienteController";
 import ProdutoController from "../controllers/ProdutoController";
 import CompraController from "../controllers/CompraController";
 import AuthController from "../controllers/AuthController";
+import {
+  validatorCliente,
+  validatorCompra,
+  validatorProduto,
+} from "../config/validator";
+import { adm } from "../middlewares/adm";
 
 router.post("/login", AuthController.login);
 router.get("/user", AuthController.getDetails);
 
-router.post("/cliente", ClienteController.createUser);
-router.get("/cliente", ClienteController.getAllUsers);
-router.get("/cliente/:id", ClienteController.getUser);
-router.put("/cliente/:id", ClienteController.updateUser);
-router.delete("/cliente/:id", ClienteController.deleteUser);
+router.post(
+  "/cliente",
+  validatorCliente("createCliente")!,
+  ClienteController.createUser
+);
+router.get("/cliente", adm, ClienteController.getAllUsers);
+router.get("/cliente/:id", adm, ClienteController.getUser);
+router.put("/cliente/:id", adm, ClienteController.updateUser);
+router.delete("/cliente/:id", adm, ClienteController.deleteUser);
 
-router.post("/produto", ProdutoController.createProduto);
+router.post(
+  "/produto",
+  adm,
+  validatorProduto("createProduto")!,
+  ProdutoController.createProduto
+);
 router.get("/produto", ProdutoController.getAllProdutos);
 router.get("/produto/:id", ProdutoController.getProduto);
-router.put("/produto/:id", ProdutoController.updateProduto);
-router.delete("/produto/:id", ProdutoController.deleteProduto);
+router.put("/produto/:id", adm, ProdutoController.updateProduto);
+router.delete("/produto/:id", adm, ProdutoController.deleteProduto);
 
-router.post("/compra", CompraController.comprar);
-router.get("/compra", CompraController.compras);
-router.delete("/compra/:id", CompraController.delete);
+router.post(
+  "/compra",
+  validatorCompra("createCompra")!,
+  CompraController.comprar
+);
+router.get("/compra", adm, CompraController.compras);
+router.delete("/compra/:id", adm, CompraController.delete);
 
 export default router;

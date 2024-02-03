@@ -2,11 +2,12 @@ import path from "path";
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-import { Request, Response } from "express";
+import { Request, Response, request } from "express";
 import auth from "../config/auth";
 import filtrarDadosDoCliente from "../utils/filtrarDadosDoCliente";
 import { readRenderHtml, transport } from "../config/mailer";
 import handlebars from "handlebars";
+import { validationResult } from "express-validator";
 
 /* async function teste(req: Request, res: Response) {
   res.status(200).send("Funcionou");
@@ -15,11 +16,16 @@ import handlebars from "handlebars";
 class ClienteController {
   async createUser(req: Request, res: Response) {
     try {
-      const { nome, cpf, email, senha, telefone } = req.body;
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ error: errors.array() });
+      }
+
+      const { nome, cpf, email, senha, telefone, adm } = req.body;
       const { hash, salt } = auth.generatePassword(senha);
 
       const cliente = await prisma.cliente.create({
-        data: { nome, cpf, email, telefone, hash, salt },
+        data: { nome, cpf, email, telefone, hash, salt, adm },
       });
 
       // Envio do email de confirmação
@@ -109,9 +115,9 @@ class ClienteController {
 
       //
 
-      res.status(201).json(cliente);
+      res.status(201).json(filtrarDadosDoCliente(cliente));
     } catch (error) {
-      res.status(400).json({ error });
+      res.status(500).json({ error });
     }
   }
 
@@ -120,7 +126,7 @@ class ClienteController {
       const clientes = await prisma.cliente.findMany();
       res.status(200).json(clientes);
     } catch (error) {
-      res.status(400).json({ error });
+      res.status(500).json({ error });
     }
   }
 
@@ -132,7 +138,7 @@ class ClienteController {
       });
       res.status(200).json(cliente);
     } catch (error) {
-      res.status(400).json({ error });
+      res.status(500).json({ error });
     }
   }
 
@@ -145,7 +151,7 @@ class ClienteController {
       });
       res.status(200).json(cliente);
     } catch (error) {
-      res.status(400).json({ error });
+      res.status(500).json({ error });
     }
   }
 
@@ -157,7 +163,7 @@ class ClienteController {
       });
       res.status(200).json(cliente);
     } catch (error) {
-      res.status(400).json({ error });
+      res.status(500).json({ error });
     }
   }
 }

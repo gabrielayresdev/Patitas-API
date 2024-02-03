@@ -18,6 +18,7 @@ model Cliente {
   hash      String
   salt      String
   telefone  String     @unique @db.VarChar(14)
+  adm       Boolean
   compras   Compra[]
 
   @@map("cliente")
