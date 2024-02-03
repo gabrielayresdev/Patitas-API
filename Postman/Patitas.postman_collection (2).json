@@ -1,0 +1,632 @@
+{
+	"info": {
+		"_postman_id": "4c47fea4-4f57-4fdc-9db6-529e4ff8452f",
+		"name": "Patitas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26828798"
+	},
+	"item": [
+		{
+			"name": "Compra",
+			"item": [
+				{
+					"name": "/compra",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"produtoId\": 1,\r\n    \"quantidade\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compra (adm)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compra (exemplo de status 401)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTcwNjkyNzU0MDI4MywiZXhwIjoxNzA2OTI4MTQ1MDgzfQ.Nj0MEasgRHtg8kWVwUzTjnI3FtcKlRlKuOv4c67wnk9qqzYRPeaoFHjIzLaItQ1eSmiId07ETQkIInMBxO0Gyvnygu2JTTJvpcM4Wixw5_qdbBEWvNgu0yow8xv-_JqUfBG_KA0ZqvuJ7POP16bRuCCMXPNDIDr-5Wk4lPnj_2_Y1zxcLDli9EAF_9VSHOkqIfKzw2LkUDdbljb4AH9R3KhEUnxBhogfYYy990SzqUSYTPu54J5NfLowQhcdvOYekyIvDG62G2GDWZILXLW2H_5R0sE_TzxkgTjYKIZEcE1plsfb8jG-uIlYaBTBErdSl5UYq9WOicVoRxRH94Cu98-7WKOMRAhMvE5ZqeBmylWEvUxtyxoeEn3iiKdMRKZIwYt53Ksrpl-DBGavREjX-eDXL2muBpTaRXnDExB6ySLKJoPgSVthW3RXkF7qbLw5SatZ85PmT9i9WbsW4TzfySy41dHrl5gusDpRt3m3KM2WvrFT2wEB6aQzDnh-WD8fsihYw05GhJckqJPJPc1cBwNSVhSdneJeF7rj5cYNvs2KFLGSAzLVp8Ln7dkAz_TJ9lEEPfs2Xw95u_sNpotOkoCEFIigKwVrrs6OHQceiekTXENxCtwNA6oKLmae5ZVisjcbem-Lqg_l6kwXHhFoDbbEws2sPg4NQ7ElDwAHrtI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compra/id (adm)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/compra/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"compra",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "/produto (adm)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Ração Fórmula Natural Life Super Premium para Cães Adultos Raças Mini e Pequena\",\r\n    \"preco\": 286.90,\r\n    \"categoria\": \"racao\",\r\n    \"foto_path\": \"https://www.petlove.com.br/images/products/243631/…-Adultos-Ra%C3%A7as-Mini-e-Pequena.jpg?1628875695\",\r\n    \"desconto\": 0,\r\n    \"quantidade\": 123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/produto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/produto/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/produto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/produto/{id} (adm)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"desconto\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/produto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/produto/{id} (adm)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3333/produto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "/cliente (adm)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Gabriel Ayres\",\r\n    \"cpf\": \"13404795750\",\r\n    \"email\": \"gabriel.ar.fort@gmail.com\",\r\n    \"senha\": \"teste123\",\r\n    \"telefone\": \"967213085\",\r\n    \"adm\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"João Felipe\",\r\n    \"cpf\": \"12345678910\",\r\n    \"email\": \"joaofelipelopes25@gmail.com\",\r\n    \"senha\": \"teste123\",\r\n    \"telefone\": \"999999999\",\r\n    \"adm\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/cliente (adm)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/cliente/{id} (adm)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/cliente/{id} (adm)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Gabriel Ayres\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/cliente/{id} (adm)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkyNzQyNDA5OCwiZXhwIjoxNzA2OTI4MDI4ODk4fQ.HahKgmuKQSUjBGfkLm_tchWe_c5Ay-KmQ3T2csYtyf5F4n7f0qfweD4ftEgKaBJj8i4gdbfUKttPXSZk0zcJlmnkRWTvZRBhAXugUSOfyE3ivZnnEnlQOMm-1JFlsAAJF7ToMZzbhqeXxs3nnRHb3YRpkPF5QGEfVNOGs-hry85j8dFa7XwO_Oo6AMo7WlG4UZqYITQ-rX9IHugnPxTx2Fk0QuE6rW6eJHb3WXiV8-u6sir1FwcEXWpR7HAV15vut-uBAfDGJ8HHl9hIm4Gj2MUDH8NXnVCyBvNc3bayw8F0GP1niucswoXbPbbcgesrhlfzmiavUlh4DF0dSgViHpFdycASUmEwX3mzGupVP3NXNc-czgL06fOF5m3ReNFmQASGQPxrEqKncagXkKykFD9qmjDMRX5XWDrVwjABEDfE1_Pitera3_QX9d731IjwEgLtBOP4wmgwBGZoU0Up2uSANo2gKRlOiP5CwzK3zu1ZczqT89pyu8hCTzcj_JQNWtGg4YIEQdcgXVn2O-x_NbzFGX9zj3KOpnv-Zny77J-fhuHwI17rjcB4IUYRRb_kjScN71dX8C7y4C83Xvtj0JDyaLtCNbZwJCSjZN5AVIFTzdPrQUOIjIJn9ycuX-EUtaOmRxScuCc7HDxfF-44e1ZI6diwOEJLaWJ4QYtA8kE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3333/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "/login (adm)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gabriel.ar.fort@gmail.com\",\r\n    \"senha\": \"teste123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"joaofelipelopes25@gmail.com\",\r\n    \"senha\": \"teste123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwNjkwMjIzMDg5NCwiZXhwIjoxNzA2OTAyODM1Njk0fQ.bmFSZe-espDTRYtnKQUitHpJRBUXbj9dvQCWjMVtvlgiIAsfjiaGdZk-rtXBK7CIlaq2H9eIrzbW_L27NOmyO-OzsGSzoIjf4yBYjYwD684UtReqkMUQX9x3-IFLGkKpX28lE8ly5_XsXitcWleupeEiLSg34hszXYM_4uv4JbdlslkJFudFGx8YlOq7cNVKrFtDcmrQ_qBcld8hKu5uu6JL6nSEgflSTazBDeQftrNf4YR33f2z4YXmAufLQmwADAiiKOQbYsJfm_HzrvU2GNF81gD2SEJBwjAuO5OzyIgsp2H48HKAWSvwRTxvwjfQNrtX0x8FMp_sZ6mYUPopAXMZjbybkA4OyKu_0XQ2ianao9YRucf__Vc5wSV90sENnCv6GlosVVIsgQlm7pO3NuCWNgFh8q7PIDrkjvmbybAO6R_tDVZwob1v4leEts3VzB5EMDB2RWCRb7TyRpoS-K9Hdawk-sUN5n7sqEQsZ06u6SV_5KV9NhfA2WycGVHU-jfdOUc-QCL6vyVO3MIouE1rgL0QptCOYhtOEGtgAp7bPnFR91TQjl4O97Lzo_gXT_XRNaHK1a1zKc4FqRVPXrmRRdNPnNkjgRBAgeufBMkv3z-KFDxTXBTSn5NzvADGaVKFlAsP3qq-FIXRJjCqjjMmSm8ixDnNqkSDuKE6GtA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
